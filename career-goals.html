@@ -17,7 +17,6 @@
       }
     </style>
 </head>
-<body>
   <div id="tsparticles"></div>
 <body>
   <header class="site-header">
@@ -101,10 +100,12 @@
 
         <button type="submit" class="btn">Send</button>
       </form>
+      <audio id="song-audio" src="assets/AGUA.mp3" controls preload="auto" style="display:block; margin: 1.5em auto 0 auto;"></audio>
     </section>
   </main>
 
   <footer class="site-footer">
+
     <p>&copy; <span id="year"></span> Hugo Bolivar Webster III</p>
   </footer>
 
@@ -127,6 +128,16 @@
       },
     });
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('ring-bell-btn').addEventListener('click', function() {
+      var bell = document.getElementById('bell-audio');
+      if (bell) {
+        bell.currentTime = 0;
+        bell.play();
+      }
+    });
   </script>
 </body>
 </html>
