@@ -9,9 +9,11 @@
 </head>
 <body>
   <header class="site-header">
-    <h1 id="top">Hugo Bolivar Webster III <span class="tagline">— Full Stack Software Engineer</span></h1>
-    <div id="retro-clock" class="retro-clock" aria-live="polite"></div>
-  </header>
+  <h1 id="top">Hugo Bolivar Webster III <span class="tagline">— Full Stack Software Engineer</span></h1>
+  <div id="retro-clock" class="retro-clock" aria-live="polite"></div>
+  <div id="current-date"></div> <!-- Add this -->
+  <hr> 
+</header>
 
   <nav class="main-nav">
     <ul>
@@ -150,6 +152,8 @@
     })();
   </script>
   <script>
+  document.getElementById('current-date').textContent = 'Today: ' + new Date().toLocaleDateString();
+  document.getElementById('year').textContent = new Date().getFullYear();
   function updateRetroClock() {
     const clock = document.getElementById('retro-clock');
     const now = new Date();
@@ -160,7 +164,6 @@
   }
   setInterval(updateRetroClock, 1000);
   updateRetroClock();
-  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
