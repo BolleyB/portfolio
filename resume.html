@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Résumé — Hugo Bolivar Webster III</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="top">Hugo Bolivar Webster III <span class="tagline">— Full Stack Software Engineer</span></h1>
+    <div id="retro-clock" class="retro-clock" aria-live="polite"></div>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="resume.html" aria-current="page">Résumé</a></li>
+      <li><a href="cover-letter.html">Cover Letter</a></li>
+      <li><a href="career-goals.html">Career Goals</a></li>
+    </ul>
+  </nav>
+
+  <main class="center-all">
+    <section>
+      <h2>Professional Summary</h2>
+      <article>
+        <p>
+          Results-driven <strong>Full Stack Software Engineer</strong> with 5+ years of experience in commercial and military environments.
+          Skilled in <em>Agile Scrum</em>, CI/CD, and modern programming languages including JavaScript, Python, and C#.
+          Former U.S. Army System Administrator with an active Secret clearance.
+          <span class="highlight">Currently pursuing a B.S. in Computer Science at WGU (expected graduation May 2027).</span>
+        </p>
+        <hr>
+      </article>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript, TypeScript, Python, Java, C#, HTML/CSS3, SASS</li>
+        <li>React, Node.js, Express.js, FastAPI, Elastic Search, MS SQL</li>
+        <li>REST APIs, Redis, MongoDB, PostgreSQL, MySQL</li>
+        <li>DevOps: GitHub, Docker, AWS, Vite, Webpack, Jest</li>
+        <li>Security: OAuth2, JWT, HTTPS</li>
+        <li>AI/ML: RAG, LangChain, LlamaIndex</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <article>
+        <h3>Software Engineer — SponsorForce (Remote)</h3>
+        <p>May 2024 – Present</p>
+        <ul>
+          <li>Engineered scalable chatbot solution using React, FastAPI, and Redis.</li>
+          <li>Designed embeddable ChatWidget for Vue.js apps.</li>
+          <li>Improved query performance by implementing caching and detailed logging.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Software Engineer — Mailchimp (Atlanta, GA)</h3>
+        <p>May 2021 – April 2022</p>
+        <ul>
+          <li>Developed monitoring systems with React, Node.js, and MySQL.</li>
+          <li>Built RESTful APIs that boosted reporting speed by 24%.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Full Stack Engineer — Upwork Inc. (Remote)</h3>
+        <p>June 2020 – April 2021</p>
+        <ul>
+          <li>Streamlined trucking operations with Node.js/MySQL.</li>
+          <li>Designed secure web services, reducing attacks from 2.3% to 0.02%.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>System Administrator & IT Technician — U.S. Army (Wiesbaden, Germany)</h3>
+        <p>March 2019 – May 2023</p>
+        <ul>
+          <li>Designed a secure wireless solution for 170+ assets.</li>
+          <li>Managed Active Directory accounts and cybersecurity training.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <table class="edu-table">
+        <caption>Education Summary</caption>
+        <thead>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.S. Software Engineering</td>
+            <td>Western Governors University</td>
+            <td>In Progress (Expected May 2027)</td>
+            <td>Software Engineering focus</td>
+          </tr>
+          <tr>
+            <td>Software Engineering Intensive</td>
+            <td>General Assembly</td>
+            <td>Completed 2024</td>
+            <td>Full-stack training</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <article>
+        <h3>Kernel Colonel</h3>
+        <p>Incremental clicker game with React, Node.js, Express, and MongoDB.</p>
+      </article>
+    
+      <article>
+        <h3>Battleship</h3>
+        <p>Browser game created with HTML, CSS, and JavaScript.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Extras</h2>
+      <p>Preparing for Amazon SDE Certification</p>
+      <hr>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Hugo Bolivar Webster III</p>
+    <a href="#top" class="back-to-top">Back to top</a>
+  </footer>
+
+  <script>
+    (function () {
+      const now = new Date();
+      document.getElementById('current-date').textContent = 'Today: ' + now.toLocaleDateString();
+      document.getElementById('year').textContent = now.getFullYear();
+      console.log('Resume page loaded successfully at', now.toLocaleString());
+    })();
+  </script>
+  <script>
+  function updateRetroClock() {
+    const clock = document.getElementById('retro-clock');
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+  }
+  setInterval(updateRetroClock, 1000);
+  updateRetroClock();
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

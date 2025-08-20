@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Goals — Hugo Bolivar Webster III</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add this to your <head> section -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ffffff, #ac841f);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="tsparticles"></div>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Career Goals</h1>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="resume.html">Résumé</a></li>
+      <li><a href="cover-letter.html">Cover Letter</a></li>
+      <li><a href="career-goals.html" aria-current="page">Career Goals</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="vision-section">
+  <div class="vision-text">
+    <img src="assets/IMG_8423.jpeg" alt="Professional portrait" width="150" height="200" class="profile-pic">
+    <h2>Vision</h2>
+    <p>
+        My career goal is to excel as a <strong>Full Stack Software Engineer</strong>, specializing in artificial intelligence, cloud-native architectures, and secure systems. I am passionate about leveraging technology to drive innovation in the automotive industry, with ambitions to contribute to world-class engineering teams at companies such as <strong>Porsche</strong>, <strong>Aston Martin</strong>, or <strong>Koenigsegg</strong>. I aspire to develop advanced software solutions for next-generation vehicles, integrating smart features, autonomous driving capabilities, and robust cybersecurity. Ultimately, I aim to play a key role in large-scale, mission-critical projects that shape the future of mobility and redefine performance and safety standards worldwide.
+    </p>
+  </div>
+</section>
+
+<section class="media-section">
+  <h2 class="section-header">Media</h2>
+  <div class="center-media">
+    <video controls width="480" height="270">
+      <source src="/assets/cg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+        <section>
+      <h2 class="section-header">Contact Me</h2>
+      <form action="https://wp.zybooks.com/form-viewer.php" method="post" class="contact-form">
+        <div class="grid-2-2">
+          <label>
+            First Name
+            <input type="text" name="firstName" required>
+          </label>
+          <label>
+            Last Name
+            <input type="text" name="lastName" required>
+          </label>
+          <label>
+            Company
+            <input type="text" name="company">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone">
+          </label>
+          <label>
+            Contact 
+            <select name="contactMethod" required>
+              <option value="phone">Phone</option>
+              <option value="email">Email</option>
+              <option value="text">Text</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <fieldset>
+          <legend>Best Contact Time</legend>
+          <label><input type="radio" name="time" value="am" required> a.m.</label>
+          <label><input type="radio" name="time" value="pm"> p.m.</label>
+          <label><input type="radio" name="time" value="anytime"> Anytime</label>
+        </fieldset>
+
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Hugo Bolivar Webster III</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("tsparticles", {
+      particles: {
+        number: { value: 100 },
+        links: { enable: true, distance: 150 },
+        move: { enable: true, speed: 1 },
+        size: { value: 2 },
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "grab" },
+        },
+      },
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
